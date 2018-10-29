@@ -8,14 +8,82 @@
 <h1>Python Programs</h1>
 <p></p>
 <textarea rows="30" cols="90">
-
+    #used to load fuctionality of random picker
+    import random
+    #Computer Choice Function
+    def rps():
+      computer_choice = random.randint (1,3)
+      if computer_choice == 1:
+        computer_choice_rock()
+      elif computer_choice == 2:
+       computer_choice_paper()
+      else:
+       computer_choice_scissors()
+    
+    #user choice rock
+    def computer_choice_rock():
+      user_choice = input("1 for Rock, 2 for Paper, 3 for Scissors: ")
+      if user_choice == "1":
+        print ("Tie, both players chose Rock.")
+        try_again()
+      if user_choice == "2":
+        print ("You Win! Computer chose Rock.")
+        try_again()
+      if user_choice == "3":
+        print ("You Lose, Computer chose Rock.")
+        try_again()
+      else:
+        print ("Try again")
+        computer_choice_rock()
+    #user choice paper
+    def computer_choice_paper():
+      user_choice = input("1 for Rock, 2 for Paper, 3 for Scissors: ")
+      if user_choice == "1":
+        print ("You Lose!, Computer chose Paper.")
+        try_again()
+      if user_choice == "2":
+        print ("Tie, both players chose Paper.")
+        try_again()
+      if user_choice == "3":
+        print ("You Win!, Computer chose Paper.")
+        try_again()
+      else:
+        print ("Try again")
+        computer_choice_paper()
+    #user choice scissors
+    def computer_choice_scissors():
+      user_choice = input("1 for Rock, 2 for Paper, 3 for Scissors: ")
+      if user_choice == "1":
+        print ("You Win!, computer chose Scissors.")
+        try_again()
+      if user_choice == "2":
+        print ("You Lose! Computer chose Scissors.")
+        try_again()
+      if user_choice == "3":
+        print ("Tie, Computer chose Scissors.")
+        try_again()
+      else:
+        print ("Try again")
+        computer_choice_scissors()
+    #play again block
+    def try_again():
+      choice = input("Play Again? y/n")
+      if choice == "y":
+        rps()
+      elif choice == "n":
+        print ("Are You Sure? Try Again Later!")
+        quit()
+      else:
+        print ("Try again")
+        try_again()
+    rps()
 
     
 </textarea>
 
 
 
-<a href="https://docs.google.com/document/d/10FlJgBnX50TAnQ7H4F_EN8OSmFkWOhnNyy3eV8T_UkY/edit?usp=sharing">Rock Paper Scissors Program</a>
+<a href="https://docs.google.com/document/d/1Hex7Pxk5keGSR3PFMmeybRQxlZbZH0IhDkaQEV7g-mw/edit?usp=sharing">Back Up Google Doc of Rock Paper Scissors Program</a>
 
 <a href="../index.html">Back</a> 
 </body>
